@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS:GO Live</title>
+        <link rel="stylesheet" href="/assets/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <div class="info_container">
+            <h1 id="name"></h1>
+            <p id="activity"></p>
+            <p id="team"></p>
+            <p id="health"></p>
+            <p id="armor"></p>
+            <p id="money"></p>
+            <img id="weapon_0" height="50px">
+            <img id="weapon_1" height="50px">
+            <img id="weapon_2" height="50px">
+            <img id="weapon_3" height="50px">
+            <img id="weapon_4" height="50px">
+            <img id="weapon_5" height="50px">
+            <img id="weapon_6" height="50px">
+            <img id="weapon_7" height="50px">
+            <img id="weapon_8" height="50px">
+            <br>
+            <img id="map_img">
+            <h3 id="map_txt"></h3>
+            <p id="phase"></p>
+            <div id="standings">
+                <span id="ct_wins"></span>
+                <span>:</span>
+                <span id="t_wins"></span>
+            </div>
+        </div>
+
+        <p id="raw"></p>
+
+        <script src="/assets/js/room.js"></script>
+    </body>
+</html>

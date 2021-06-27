@@ -1,0 +1,54 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.info_container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: 19px;
+}
+
+#name {
+    margin: 0;
+}
+
+#activity {
+    margin: 0;
+}
+
+#team {
+    margin: 0;
+}
+
+#health {
+    margin: 0;
+}
+
+#armor {
+    margin: 0;
+}
+
+#money {
+    margin: 0;
+}
+
+#map_txt {
+    margin: 0;
+}
+
+#phase {
+    margin: 0;
+}
+
+#ct_wins {
+    margin: 0;
+    color: #5d79ae;
+}
+
+#t_wins {
+    margin: 0;
+    color: #de9b35;
+}
