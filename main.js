@@ -3,7 +3,6 @@ const app = express();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 const morgan = require("morgan");
-const PORT = 5000;
 
 app.set("socketio", io);
 app.set("view engine", "ejs");
@@ -16,7 +15,7 @@ app.use(
 app.use(express.json());
 app.use(morgan("dev"))
 
-http.listen(PORT, () => {console.log(`Server started -> http://localhost:${PORT}`)});
+http.listen(process.env.PORT || 5000, () => {console.log(`Server started -> http://localhost:${process.env.PORT || 5000}`)});
 
 app.get("/", (request, response) => {
   response.render("index.ejs");
