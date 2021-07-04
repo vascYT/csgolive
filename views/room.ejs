@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="/assets/css/room.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <script src="/socket.io/socket.io.js"></script>
-        <title>Room @ CS:GO Live</title>
-    </head>
-    <body>
-        <div id="waiting-container">
-            <h1>Waiting for data...</h1>
-        </div>
+  <head>
+    <link rel="stylesheet" href="/assets/css/room.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Room @ CS:GO Live</title>
+  </head>
+  <body>
+    <div id="waiting-container">
+      <h1>Waiting for data...</h1>
+    </div>
 
-        <div id="hud-container">
-            <div id="effect_container"></div>
+    <div id="hud-container">
+      <div id="effect_container"></div>
 
-            <img class="logo" src="/assets/img/logo.png">
+      <img class="logo" src="/assets/img/logo.png" />
 
-            <div class="nametag">
-                <h1 id="name"></h1>
-            </div>
+      <div class="nametag">
+        <h1 id="name"></h1>
+      </div>
 
-            <p id="money"></p>
+      <p id="money"></p>
 
-            <div class="health_armor">
-                <img id="health_img" src="/assets/img/health_icon.png">
-                <span id="health"></span>
-                <img id="armor_img" src="/assets/img/armor_icon.png">
-                <span id="armor"></span>
-            </div>
+      <div class="health_armor">
+        <img id="health_img" src="/assets/img/health_icon.png" />
+        <span id="health"></span>
+        <img id="armor_img" src="/assets/img/armor_icon.png" />
+        <span id="armor"></span>
+      </div>
 
-            <div class="weapons"></div>
+      <div class="weapons"></div>
 
-            <div class="standings">
-                <span id="ct_wins"></span>
-                <span id="t_wins"></span>
-                <h3 id="phase"></h3>
-            </div>
+      <div class="standings">
+        <span id="ct_wins"></span>
+        <span id="t_wins"></span>
+        <h3 id="phase"></h3>
+      </div>
+    </div>
 
-        </div>
+    <p id="raw"></p>
 
-        <p id="raw"></p>
-
-        <script src="/assets/js/room.js"></script>
-    </body>
+    <script src="/assets/js/room.js"></script>
+  </body>
 </html>

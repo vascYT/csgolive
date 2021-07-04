@@ -9,13 +9,15 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(
   express.urlencoded({
-    extended: true
+    extended: true,
   })
 );
 app.use(express.json());
-app.use(morgan("dev"))
+app.use(morgan("dev"));
 
-http.listen(process.env.PORT || 5000, () => {console.log(`Server started -> http://localhost:${process.env.PORT || 5000}`)});
+http.listen(process.env.PORT || 5000, () => {
+  console.log(`Server started -> http://localhost:${process.env.PORT || 5000}`);
+});
 
 app.get("/", (request, response) => {
   response.render("index.ejs");
