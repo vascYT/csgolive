@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ env.REGISTRY }}/${{ github.repository }}:${{github.sha}}
+          tags: ${{ github.repository }}:${{github.sha}}
   deploy:
     name: Deploy to Kubernetes
     runs-on: ubuntu-latest
