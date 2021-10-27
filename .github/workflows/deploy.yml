@@ -18,7 +18,7 @@ jobs:
       - name: Login
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
       - name: Build
-        run: docker build -t ${{ secrets.DOCKER_HOST }}/${{ github.repository }}:${{github.sha}} .
+        run: docker build -t ${{ env.REGISTRY }}/${{ github.repository }}:${{github.sha}} .
       - name: Push
         run: docker push ${{ env.REGISTRY }}/${{ github.repository }}:${{github.sha}}
   deploy:
