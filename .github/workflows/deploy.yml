@@ -5,6 +5,7 @@ on: [push]
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  DEPLOYMENT_NAME: csgolive-deployment
 
 jobs:
   build-push:
@@ -48,11 +49,11 @@ jobs:
         uses: actions-hub/kubectl@master
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
-      - name: Update image
+      - name: Restart rollout
         uses: actions-hub/kubectl@master
         with:
-          args: set image deployment/csgolive-deployment csgolive=${{ env.REGISTRY }}/${{ github.repository }}:${{ steps.meta.outputs.tags }}
-      - name: Rollout status
+          args: rollout restart deployment/${{ env.DEPLOYMENT_NAME }}
+      - name: Restart status
         uses: actions-hub/kubectl@master
         with:
-          args: rollout status deployment/csgolive-deployment
+          args: rollout status deployment/${{ env.DEPLOYMENT_NAME }}
