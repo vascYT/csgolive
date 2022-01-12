@@ -1,15 +1,5 @@
-FROM node:12
-
+FROM node:16-alpine
 WORKDIR /app
-
-COPY package*.json ./
-
-RUN npm install
-
 COPY . .
-
-EXPOSE 5000
-
-ENV PORT=5000
-
+RUN npm i
 CMD ["npm", "start"]
